@@ -9,6 +9,7 @@ import ServiceTasks from './pages/ServiceTasks';
 import Sidebar from './components/UI/Sidebar';
 import { CssBaseline, Toolbar, Box, AppBar, Typography, IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import logo from './assets/LogoDeloCube 1.png'; // Импорт логотипа
 
 const drawerWidth = 240;
 
@@ -33,9 +34,7 @@ function App() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            DeloCube
-          </Typography>
+          <img src={logo} alt="DeloCube Logo" style={{ height: 40 }} /> {/* Логотип */}
         </Toolbar>
       </AppBar>
       <Box sx={{ display: 'flex' }}>
