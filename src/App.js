@@ -6,7 +6,6 @@ import UserManagement from './pages/UserManagement';
 import FinancialControl from './pages/FinancialControl';
 import FeedbackSupport from './pages/FeedbackSupport';
 import ServiceTasks from './pages/ServiceTasks';
-import Navbar from './components/UI/Navbar';
 import Sidebar from './components/UI/Sidebar';
 import { CssBaseline, Toolbar, Box, AppBar, Typography, IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';

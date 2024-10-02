@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Drawer, List, ListItem, ListItemIcon, ListItemText, IconButton, Collapse, Toolbar, Box, Divider } from '@mui/material';
-import { ExpandLess, ExpandMore, Menu as MenuIcon, ChevronLeft as ChevronLeftIcon } from '@mui/icons-material';
-import HomeIcon from '@mui/icons-material/Home';
-import BookIcon from '@mui/icons-material/Book';
-import PeopleIcon from '@mui/icons-material/People';
-import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
-import FeedbackIcon from '@mui/icons-material/Feedback';
-import BuildIcon from '@mui/icons-material/Build';
+import { ExpandLess, ExpandMore, ChevronLeft as ChevronLeftIcon } from '@mui/icons-material';
+import homeIcon from '../../assets/home.png';
+import bookingsIcon from '../../assets/bookings.png';
+import usersIcon from '../../assets/users.png';
+import financialIcon from '../../assets/financial.png';
+import feedbackIcon from '../../assets/feedback.png';
+import serviceIcon from '../../assets/service.png';
 
 const drawerWidth = 240;
 
@@ -41,19 +41,27 @@ const Sidebar = ({ open, handleDrawerToggle }) => {
         <Divider />
         <List>
           <ListItem button component={Link} to="/capsules">
-            <ListItemIcon><HomeIcon /></ListItemIcon>
+            <ListItemIcon>
+              <img src={homeIcon} alt="Home" style={{ width: 24, height: 24 }} />
+            </ListItemIcon>
             <ListItemText primary="Капсулы" />
           </ListItem>
           <ListItem button component={Link} to="/bookings">
-            <ListItemIcon><BookIcon /></ListItemIcon>
+            <ListItemIcon>
+              <img src={bookingsIcon} alt="Bookings" style={{ width: 24, height: 24 }} />
+            </ListItemIcon>
             <ListItemText primary="Бронирования" />
           </ListItem>
           <ListItem button component={Link} to="/users">
-            <ListItemIcon><PeopleIcon /></ListItemIcon>
+            <ListItemIcon>
+              <img src={usersIcon} alt="Users" style={{ width: 24, height: 24 }} />
+            </ListItemIcon>
             <ListItemText primary="Пользователи" />
           </ListItem>
           <ListItem button onClick={handleMenuClick}>
-            <ListItemIcon><AttachMoneyIcon /></ListItemIcon>
+            <ListItemIcon>
+              <img src={financialIcon} alt="Financial" style={{ width: 24, height: 24 }} />
+            </ListItemIcon>
             <ListItemText primary="Финансы" />
             {menuOpen ? <ExpandLess /> : <ExpandMore />}
           </ListItem>
@@ -65,11 +73,15 @@ const Sidebar = ({ open, handleDrawerToggle }) => {
             </List>
           </Collapse>
           <ListItem button component={Link} to="/feedback">
-            <ListItemIcon><FeedbackIcon /></ListItemIcon>
+            <ListItemIcon>
+              <img src={feedbackIcon} alt="Feedback" style={{ width: 24, height: 24 }} />
+            </ListItemIcon>
             <ListItemText primary="Обратная связь" />
           </ListItem>
           <ListItem button component={Link} to="/service-tasks">
-            <ListItemIcon><BuildIcon /></ListItemIcon>
+            <ListItemIcon>
+              <img src={serviceIcon} alt="Service" style={{ width: 24, height: 24 }} />
+            </ListItemIcon>
             <ListItemText primary="Задачи сервиса" />
           </ListItem>
         </List>
